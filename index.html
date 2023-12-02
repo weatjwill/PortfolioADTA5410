@@ -54,6 +54,22 @@
 
         section {
             margin: 20px;
+            text-align: center;
+        }
+
+        /* Circular Photo Styling */
+        .profile-photo {
+            border-radius: 50%;
+            width: 150px; /* Adjust the size as needed */
+            height: 150px; /* Adjust the size as needed */
+            overflow: hidden;
+            margin: 0 auto 20px; /* Center the photo */
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
@@ -66,12 +82,18 @@
     <nav>
         <ul>
             <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="https://your-quarto-blog-url.com">Quarto Blog</a></li>
         </ul>
     </nav>
 
     <section>
+        <!-- Circular Photo -->
+        <div class="profile-photo">
+            <img src="my_photo.jpg" alt="Your Photo">
+        </div>
+
         <h2>About Me</h2>
         <p>Your bio goes here.</p>
     </section>
