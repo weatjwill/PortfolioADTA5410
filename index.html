@@ -1,28 +1,79 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weatherly Williams - Home</title>
+    <title>Your Home Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        section {
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Weatherly Williams</h1>
+        <h1>Your Name</h1>
         <p>Email: your.email@example.com</p>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="https://your-quarto-blog-url.com">Quarto Blog</a></li>
+        </ul>
+    </nav>
+
     <section>
         <h2>About Me</h2>
         <p>Your bio goes here.</p>
     </section>
-
-    <!-- Navigation Links -->
-    <nav>
-        <ul>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blog.html">Blog</a></li>
-        </ul>
-    </nav>
 </body>
 </html>
