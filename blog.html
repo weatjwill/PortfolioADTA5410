@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weatherly's RStudio Blog</title>
+    <title>My Blog</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,9 +12,6 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
         header {
@@ -36,12 +33,11 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
         }
 
         nav li {
-            margin: 10px 0;
+            margin: 0 20px;
         }
 
         nav a {
@@ -58,17 +54,14 @@
 
         section {
             margin: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            text-align: center;
         }
 
         article {
             border: 1px solid #ddd;
             padding: 20px;
+            margin-bottom: 20px;
             background-color: #fff;
-            flex-basis: calc(33.33% - 20px);
-            box-sizing: border-box;
         }
 
         article h2 {
@@ -78,24 +71,23 @@
         article p {
             color: #555;
         }
-
-        .date {
-            font-size: 14px;
-            color: #888;
-        }
-
-        .tags {
-            display: none;
-        }
-
-        .tag-menu {
-            margin: 20px;
-        }
-
-        .tag-menu label {
-            margin-right: 10px;
-        }
     </style>
+
+    <style>
+    /* Existing styles... */
+
+    .date {
+        font-size: 14px; /* Adjust the font size as needed */
+        color: #888; /* Adjust the color as needed */
+    }
+    .condensed-paragraph {
+    max-width: 300px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the paragraph */
+    font-size: 16px; /* Keep the font size the same */
+    line-height: 1.6; /* Adjust the line height for more condensed spacing */
+}
+</style>
+    
 </head>
 <body>
     <header>
@@ -112,59 +104,23 @@
     </nav>
 
     <section>
-        <div class="tag-menu">
-            <label for="preparation">Preparation</label>
-            <input type="checkbox" id="preparation" onchange="filterByTag('preparation')">
-            <label for="analysis">Analysis</label>
-            <input type="checkbox" id="analysis" onchange="filterByTag('analysis')">
-            <label for="r-coding">R Coding</label>
-            <input type="checkbox" id="r-coding" onchange="filterByTag('r-coding')">
-        </div>
-
         <!-- Blog Post 2 -->
-        <article class="blog-post" data-tags="analysis r-coding">
+        <article>
             <h2>Correlation Analysis</h2>
-            <p class="date">Published on: 2023-12-03</p>
-            <p>
-                Looking at correlation analysis values for a data set to explore the relationship between predictor variables and a target variable.
-            </p>
-            <div class="tags">
-                <span class="tag">Analysis</span>
-                <span class="tag">R Coding</span>
-            </div>
+            <p class="date">Published on: 2023-12-03</p> <!-- Add this line for the date -->
+            <p class="condensed-paragraph">
+            Looking at correlation analysis values for a data set to explore the relationship between predictor variables and a target variable.</p>
             <a href="blogpost2.html">Read more</a>
         </article>
 
         <!-- Blog Post 1 -->
-        <article class="blog-post" data-tags="preparation analysis r-coding">
-            <h2>Variable Types and Missing Values</h2>
-            <p class="date">Published on: 2023-12-02</p>
-            <p>
-                Preparing a data set for analysis by establishing correct variable types and fixing missing values.
-            </p>
-            <div class="tags">
-                <span class="tag">Preparation</span>
-                <span class="tag">Analysis</span>
-                <span class="tag">R Coding</span>
-            </div>
-            <a href="blogpost1.html">Read more</a>
-        </article>
+<article>
+    <h2>Variable types and missing values</h2>
+    <p class="date">Published on: 2023-12-02</p> <!-- Add this line for the date -->
+    <p class="condensed-paragraph">
+    Preparing a data set for analysis by establishing correct variable types and fixing missing value.</p>
+    <a href="blogpost1.html">Read more</a>
+</article>
     </section>
-
-    <script>
-        function filterByTag(tag) {
-            // Hide all blog posts
-            const blogPosts = document.querySelectorAll('.blog-post');
-            blogPosts.forEach(post => {
-                post.style.display = 'none';
-            });
-
-            // Show only the blog posts with the selected tag
-            const selectedTagPosts = document.querySelectorAll(`[data-tags*="${tag}"]`);
-            selectedTagPosts.forEach(post => {
-                post.style.display = 'block';
-            });
-        }
-    </script>
 </body>
 </html>
