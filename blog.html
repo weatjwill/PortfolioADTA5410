@@ -156,3 +156,34 @@
         function filterByTag(tag) {
             // Hide all blog posts
             const blogPosts = document.querySelectorAll('.
+                                                        
+<!-- Add this script in the <head> or at the end of the <body> -->
+<script>
+    function filterByTag(tag) {
+        // Hide all blog posts
+        const blogPosts = document.querySelectorAll('.blog-post');
+        blogPosts.forEach(post => {
+            post.style.display = 'none';
+        });
+
+        // Show only the blog posts with the selected tag
+        const selectedTagPosts = document.querySelectorAll(`[data-tags*="${tag}"]`);
+        selectedTagPosts.forEach(post => {
+            post.style.display = 'block';
+        });
+
+        // Order blog posts by date
+        const section = document.querySelector('section');
+        const sortedPosts = Array.from(section.children).sort((a, b) => {
+            const dateA = new Date(a.querySelector('.date').textContent.split(": ")[1]);
+            const dateB = new Date(b.querySelector('.date').textContent.split(": ")[1]);
+            return dateB - dateA; // Sort in descending order
+        });
+
+        // Update the order of displayed blog posts
+        section.innerHTML = '';
+        sortedPosts.forEach(post => {
+            section.appendChild(post);
+        });
+    }
+</script>
